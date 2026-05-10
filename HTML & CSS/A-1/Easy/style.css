@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '-system-ui', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.card {
+    display: flex;
+    height: 90%;
+    width: 95%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.left {
+    height: 100%;
+    width: 60%;
+    background-color: #FBC50B;
+}
+
+
+
+.right {
+    height: 100%;
+    width: 40%;
+    background-color: #FBE8B5;
+}
+
+.transparent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.header img {
+    height: 50px;
+    width: 200px;
+}
+
+.header i {
+    font-size: 48px;
+    margin-right: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 80px;
+}
+
+.first h1 {
+    font-size: 120px;
+}
+
+.first h2 {
+    font-size: 15px;
+    line-height: 0.8;
+    letter-spacing: 4px;
+}
+
+.first p {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.first div {
+    margin: 5px 0px 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.first div .dash {
+    display: flex;
+    height: 2px;
+    width: 40px;
+    margin-right: 10px;
+    background-color: black;
+
+}
+
+.content img {
+    height: 525px;
+    width: 500px;
+    margin-right: 60px;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 30px;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #FAC40F;
+}
+
+.circle:nth-child(1) {
+    background-color: black;
+}
+
+.footer {
+    position: absolute;
+    top: 505px;
+    left: 50px;
+    right: 30px;
+}
+
+.footer img {
+    height: 250px;
+    width: 250px;
+    margin-right: 10px;
+}

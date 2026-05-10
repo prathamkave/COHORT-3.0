@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 30px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 90px;
+    object-fit: cover;
+}
+
+.main {
+    font-size: 44px;
+    font-weight: 400;
+    margin-right: 100px;
+    letter-spacing: -3px;
+    color: #750208;
+    text-transform: uppercase;
+}
+
+.main span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.main span img {
+    width: 125px;
+    height: 60px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.side {
+    font-size: 14px;
+    font-weight: 500;
+    color: #927E7D;
+    text-align: right;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hero h2 {
+    margin-left: 550px;
+    font-size: 48px;
+    font-weight: 400;
+    color: #750208;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.hero h2 span {
+    color: #AC9996;
+}
+
+.hero p {
+    margin-left: 558px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #84080e;
+}
+
+.parts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.parts .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.parts .links a {
+    color: #84080e;
+}
+
+.parts .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 115px;
+}
+
+.parts .images .img-1,
+.parts .images .img-2,
+.parts .images .img-3 {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin-left: 20px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parts .images .img-1 {
+    background-image: url(./Assets/potrait1.jpg);
+}
+
+.parts .images .img-2 {
+    background-image: url(./Assets/potrait2.jpg);
+}
+
+.parts .images .img-3 {
+    background-image: url(./Assets/potrait3.jpg);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 100px;
+}
+.footer h2 {
+    font-size: 48px;
+    font-weight: 400;
+    color: #750208;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.footer h2 span {
+    color: #AC9996;
+}
+
+.footer p {
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #84080e;
+}

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 150%;
+    display: flex;
+    justify-content: flex-end;
+    background:
+        radial-gradient(circle at top left, #7d1567 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #5d1d8d 0%, transparent 30%),
+        linear-gradient(135deg, #05051f, #12003b, #07071f);
+    padding: 50px 80px;
+    color: white;
+    position: relative;
+}
+
+.container p:hover {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero {
+    width: 90%;
+    height: 85%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero > p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: azure;
+}
+
+.cards {
+    display: flex;
+    margin-top: 10px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px; 
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+.card .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.card .text h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.card button {
+    width: 70%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid #9471f6; 
+    color: white;
+    border-radius: 50px; 
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
