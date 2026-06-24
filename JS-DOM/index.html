@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header class="site-header">
+            <h1>TaskMaster</h1>
+            <div class="theme-toggle">
+                <input type="checkbox" id="themeToggle">
+                <label for="themeToggle">Light Mode</label>
+            </div>
+        </header>
+
+        <main>
+            <section class="stats-board card">
+                <div class="stat">
+                    <span>Total</span>
+                    <strong id="valTotal">0</strong>
+                </div>
+                <div class="stat">
+                    <span>Pending</span>
+                    <strong id="valPending">0</strong>
+                </div>
+                <div class="stat">
+                    <span>Done</span>
+                    <strong id="valDone">0</strong>
+                </div>
+            </section>
+
+            <section class="task-entry card">
+                <div class="header-row">
+                    <h2>Add a Task</h2>
+                    <button id="toggleFormBtn" class="btn btn-small">Toggle Form</button>
+                </div>
+                
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="inputTitle">Task</label>
+                        <input type="text" id="inputTitle" placeholder="What needs doing?" autocomplete="off">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputCategory">Category</label>
+                            <select id="inputCategory">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Learning">Learning</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPriority">Priority</label>
+                            <select id="inputPriority">
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="submitTaskBtn" class="btn btn-primary">Save Task</button>
+                </form>
+            </section>
+
+            <section class="task-list-section">
+                <div id="emptyBoard" class="empty-state">
+                    <p>No tasks found. Add something above!</p>
+                </div>
+                <div id="tasksContainer" class="tasks-container">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
