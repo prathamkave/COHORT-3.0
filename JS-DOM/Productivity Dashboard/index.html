@@ -51,11 +51,11 @@
       }
 
       .glass-button {
-        @apply bg-white/30 dark:bg-white/10 backdrop-blur-xl border border-white/50 dark:border-white/10 hover:bg-white/50 dark:hover:bg-white/20 transition-all rounded-full flex items-center justify-center w-12 h-12 shadow-sm text-slate-800 dark:text-white;
+        @apply bg-white/30 dark:bg-white/10 backdrop-blur-xl border border-white/50 dark:border-white/10 hover:bg-white/50 dark:hover:bg-white/20 transition-all rounded-full flex items-center justify-center w-10 h-10 md:w-12 md:h-12 shadow-sm text-slate-800 dark:text-white shrink-0;
       }
 
       .glass-metric {
-        @apply bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-sm rounded-2xl flex flex-col items-center justify-center text-center p-4;
+        @apply bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-sm rounded-2xl flex flex-col items-center justify-center text-center p-3 md:p-4;
       }
 
       .text-glass-strong {
@@ -63,11 +63,11 @@
       }
 
       .field-box {
-        @apply rounded-2xl bg-white/25 dark:bg-white/10 border border-white/30 dark:border-white/10 p-3 flex flex-col gap-1.5;
+        @apply rounded-2xl bg-white/25 dark:bg-white/10 border border-white/30 dark:border-white/10 p-3 md:p-4 flex flex-col gap-1.5;
       }
 
       .glass-input {
-        @apply w-full rounded-2xl px-4 py-3 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none transition-all;
+        @apply w-full rounded-xl md:rounded-2xl px-3 md:px-4 py-2 md:py-3 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none transition-all;
         border: 1.5px solid transparent;
         background-image:
           linear-gradient(var(--input-fill), var(--input-fill)),
@@ -86,33 +86,16 @@
         @apply cursor-not-allowed opacity-60;
       }
 
-      .back-btn {
-        @apply inline-flex flex-row flex-nowrap items-center gap-2 px-5 h-11 rounded-full text-white text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all whitespace-nowrap;
-      }
-
-      .back-btn-indigo {
-        @apply bg-indigo-500/90 hover:bg-indigo-500;
-      }
-
-      .back-btn-purple {
-        @apply bg-purple-500/90 hover:bg-purple-500;
-      }
-
-      .back-btn-rose {
-        @apply bg-rose-500/90 hover:bg-rose-500;
-      }
-
-      .back-btn-amber {
-        @apply bg-amber-500/90 hover:bg-amber-500;
-      }
-
-      .back-btn-fuchsia {
-        @apply bg-fuchsia-500/90 hover:bg-fuchsia-500;
-      }
-
       .view-scroll::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
       }
+      
+      @media (min-width: 768px) {
+        .view-scroll::-webkit-scrollbar {
+          width: 6px;
+        }
+      }
+      
       .view-scroll::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.4);
         border-radius: 999px;
@@ -121,6 +104,7 @@
       input[type="range"] {
         accent-color: rgb(217 119 6 / 0.9);
       }
+      
       input[type="range"]:disabled {
         opacity: 0.4;
       }
@@ -128,21 +112,21 @@
   </head>
 
   <body
-    class="theme-light font-sans text-slate-800 dark:text-slate-200 antialiased h-screen overflow-hidden flex flex-col transition-colors duration-500"
+    class="theme-light font-sans text-slate-800 dark:text-slate-200 antialiased h-[100dvh] flex flex-col transition-colors duration-500"
   >
-    <div class="max-w-7xl mx-auto w-full p-3 md:p-6 flex-1 flex flex-col">
+    <div class="max-w-7xl mx-auto w-full p-2 sm:p-4 md:p-6 flex-1 flex flex-col min-h-0">
       <div
-        class="flex-1 flex flex-col bg-white/10 dark:bg-black/20 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden p-6"
+        class="flex-1 flex flex-col bg-white/10 dark:bg-black/20 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden p-3 md:p-6 min-h-0"
       >
         <header
-          class="glass-panel px-6 py-3 flex justify-between items-center mb-8 rounded-[2rem] bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]"
+          class="glass-panel px-4 py-3 md:px-6 flex justify-between items-center mb-4 md:mb-8 rounded-[1.5rem] md:rounded-[2rem] shrink-0 bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]"
         >
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 md:gap-3 overflow-hidden">
             <div
-              class="bg-white/50 dark:bg-white/10 p-2.5 rounded-xl border border-white/50 dark:border-white/10"
+              class="bg-white/50 dark:bg-white/10 p-2 md:p-2.5 rounded-xl border border-white/50 dark:border-white/10 shrink-0"
             >
               <svg
-                class="w-7 h-7 text-glass-strong"
+                class="w-5 h-5 md:w-7 md:h-7 text-glass-strong"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -155,20 +139,20 @@
                 ></path>
               </svg>
             </div>
-            <h1 class="text-xl font-bold tracking-tight text-glass-strong">
+            <h1 class="text-sm font-semibold sm:text-base md:text-xl md:font-bold tracking-tight text-glass-strong truncate">
               Productivity Dashboard
             </h1>
           </div>
 
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 md:gap-4 shrink-0">
             <button
               id="theme-toggle"
-              class="hover:bg-black/10 hover:dark:bg-white/10 p-2 rounded-xl border border-white/50 dark:border-white/10"
+              class="glass-button"
               aria-label="Toggle Theme"
             >
               <svg
                 id="theme-icon-light"
-                class="w-7 h-7 text-amber-500 drop-shadow-sm"
+                class="w-5 h-5 md:w-7 md:h-7 text-amber-500 drop-shadow-sm"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -182,7 +166,7 @@
               </svg>
               <svg
                 id="theme-icon-dark"
-                class="w-7 h-7 hidden text-blue-300 drop-shadow-sm"
+                class="w-5 h-5 md:w-7 md:h-7 hidden text-blue-300 drop-shadow-sm"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -200,11 +184,11 @@
               href="https://github.com/prathamkave/COHORT-3.0/tree/main/JS-DOM/Productivity%20Dashboard"
               target="_blank"
               rel="noopener noreferrer"
-              class="hover:bg-black/10 hover:dark:bg-white/10 p-2 rounded-xl border border-white/50 dark:border-white/10 mr-2"
+              class="glass-button"
               aria-label="GitHub Repository"
             >
               <svg
-                class="w-7 h-7 text-glass-strong"
+                class="w-5 h-5 md:w-7 md:h-7 text-glass-strong"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -220,60 +204,61 @@
 
         <main
           id="dashboard-view"
-          class="grid grid-cols-1 lg:grid-cols-11 gap-5 flex-1 min-h-0 overflow-y-auto view-scroll"
+          class="grid grid-cols-1 lg:grid-cols-11 gap-4 md:gap-5 flex-1 min-h-0 overflow-y-auto view-scroll pr-1 md:pr-2"
         >
           <section
-            class="glass-panel lg:col-span-5 p-8 flex flex-col justify-center items-center text-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+            class="glass-panel lg:col-span-5 p-5 md:p-8 flex flex-col justify-center items-center text-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem]"
           >
             <div class="w-full flex flex-col items-center">
               <div
-                class="w-full flex flex-col md:flex-row justify-between items-center gap-10"
+                class="w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10"
               >
                 <div class="text-center md:text-left">
                   <h2
-                    class="text-5xl md:text-6xl xl:text-6xl font-light text-glass-strong"
+                    class="text-4xl sm:text-5xl md:text-6xl xl:text-6xl font-light text-glass-strong"
                   >
                     <span id="dash-time">--:--</span>
                     <span
                       id="dash-ampm"
-                      class="text-xl md:text-2xl font-semibold text-blue-600 dark:text-blue-400"
+                      class="text-lg md:text-2xl font-semibold text-blue-600 dark:text-blue-400"
                     ></span>
                   </h2>
                   <p
                     id="dash-day"
-                    class="mt-3 text-2xl font-bold text-glass-strong"
+                    class="mt-2 md:mt-3 text-xl md:text-2xl font-bold text-glass-strong"
                   >
                     -
                   </p>
                   <p
                     id="dash-date"
-                    class="mt-1 text-base text-slate-700 dark:text-slate-300"
+                    class="mt-1 text-sm md:text-base text-slate-700 dark:text-slate-300"
                   >
                     -
                   </p>
                 </div>
 
-                <div class="hidden md:block h-40 w-px bg-white/40"></div>
+                <div class="hidden md:block h-32 md:h-40 w-px bg-white/40 shrink-0"></div>
+                <div class="block md:hidden h-px w-full bg-white/40 shrink-0"></div>
 
                 <div class="text-center md:text-right">
-                  <div id="dash-weather-icon" class="text-6xl mb-3">🌡️</div>
+                  <div id="dash-weather-icon" class="text-5xl md:text-6xl mb-2 md:mb-3">🌡️</div>
                   <h1
                     id="dash-temp"
-                    class="text-6xl md:text-6xl font-light text-glass-strong"
+                    class="text-5xl md:text-6xl font-light text-glass-strong"
                   >
                     --°
                   </h1>
                   <p
                     id="dash-desc"
-                    class="mt-2 text-2xl font-bold text-glass-strong"
+                    class="mt-1 md:mt-2 text-xl md:text-2xl font-bold text-glass-strong"
                   >
                     Loading...
                   </p>
                   <p
-                    class="mt-1 flex items-center justify-center md:justify-end gap-2 text-base font-medium text-slate-700 dark:text-slate-300"
+                    class="mt-1 flex items-center justify-center md:justify-end gap-1.5 md:gap-2 text-sm md:text-base font-medium text-slate-700 dark:text-slate-300"
                   >
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 md:w-5 md:h-5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -296,75 +281,75 @@
                 </div>
               </div>
 
-              <div class="w-full mt-8 grid grid-cols-3 gap-3">
-                <div class="glass-metric !p-3">
+              <div class="w-full mt-6 md:mt-8 grid grid-cols-3 gap-2 md:gap-3">
+                <div class="glass-metric !p-2 md:!p-3">
                   <span
-                    class="text-xs font-semibold text-glass-strong opacity-70"
+                    class="text-[10px] md:text-xs font-semibold text-glass-strong opacity-70"
                     >Humidity</span
                   >
                   <span
                     id="dash-humidity"
-                    class="text-lg font-bold text-glass-strong"
+                    class="text-base md:text-lg font-bold text-glass-strong"
                     >--%</span
                   >
                 </div>
-                <div class="glass-metric !p-3">
+                <div class="glass-metric !p-2 md:!p-3">
                   <span
-                    class="text-xs font-semibold text-glass-strong opacity-70"
+                    class="text-[10px] md:text-xs font-semibold text-glass-strong opacity-70"
                     >Wind</span
                   >
                   <span
                     id="dash-wind"
-                    class="text-lg font-bold text-glass-strong"
-                    >-- km/h</span
+                    class="text-base md:text-lg font-bold text-glass-strong leading-tight"
+                    >-- <span class="text-xs">km/h</span></span
                   >
                 </div>
-                <div class="glass-metric !p-3">
+                <div class="glass-metric !p-2 md:!p-3">
                   <span
-                    class="text-xs font-semibold text-glass-strong opacity-70"
+                    class="text-[10px] md:text-xs font-semibold text-glass-strong opacity-70"
                     >Feels Like</span
                   >
                   <span
                     id="dash-feels"
-                    class="text-lg font-bold text-glass-strong"
+                    class="text-base md:text-lg font-bold text-glass-strong"
                     >--°</span
                   >
                 </div>
               </div>
 
               <div
-                class="w-full mt-6 bg-white/25 dark:bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-5 flex items-center justify-between"
+                class="w-full mt-5 md:mt-6 bg-white/25 dark:bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-4 md:p-5 flex items-center justify-between"
               >
-                <div class="flex items-center gap-4">
-                  <span id="dash-greeting-emoji" class="text-4xl">☀️</span>
+                <div class="flex items-center gap-3 md:gap-4">
+                  <span id="dash-greeting-emoji" class="text-3xl md:text-4xl shrink-0">☀️</span>
                   <div class="text-left">
                     <h3
                       id="dash-greeting-title"
-                      class="font-bold text-lg text-glass-strong"
+                      class="font-bold text-base md:text-lg text-glass-strong"
                     >
                       Good Morning!
                     </h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                    <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 line-clamp-1">
                       Let's build something great today.
                     </p>
                   </div>
                 </div>
-                <span class="text-3xl text-yellow-400">✨</span>
+                <span class="text-2xl md:text-3xl text-yellow-400 shrink-0">✨</span>
               </div>
             </div>
           </section>
 
-          <section class="lg:col-span-6 flex flex-col gap-5">
+          <section class="lg:col-span-6 flex flex-col gap-3 md:gap-5">
             <div
               data-view="todo-view"
-              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95"
+              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95 transition-transform duration-300"
             >
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-4 md:gap-5">
                 <div
-                  class="w-14 h-14 rounded-2xl bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 flex items-center justify-center border border-white/40 dark:border-white/10"
+                  class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 flex items-center justify-center border border-white/40 dark:border-white/10"
                 >
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -378,14 +363,14 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-lg text-glass-strong">Todo List</h3>
-                  <p class="text-sm font-medium text-glass-strong opacity-80">
+                  <h3 class="font-bold text-base md:text-lg text-glass-strong">Todo List</h3>
+                  <p class="text-xs md:text-sm font-medium text-glass-strong opacity-80">
                     Manage your tasks efficiently
                   </p>
                 </div>
               </div>
               <svg
-                class="w-6 h-6 text-glass-strong opacity-50"
+                class="w-5 h-5 md:w-6 md:h-6 text-glass-strong opacity-50 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -401,14 +386,14 @@
 
             <div
               data-view="planner-view"
-              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95"
+              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95 transition-transform duration-300"
             >
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-4 md:gap-5">
                 <div
-                  class="w-14 h-14 rounded-2xl bg-purple-500/20 text-purple-700 dark:text-purple-300 flex items-center justify-center border border-white/40 dark:border-white/10"
+                  class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-purple-500/20 text-purple-700 dark:text-purple-300 flex items-center justify-center border border-white/40 dark:border-white/10"
                 >
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -422,16 +407,16 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-lg text-glass-strong">
+                  <h3 class="font-bold text-base md:text-lg text-glass-strong">
                     Daily Planner
                   </h3>
-                  <p class="text-sm font-medium text-glass-strong opacity-80">
+                  <p class="text-xs md:text-sm font-medium text-glass-strong opacity-80">
                     Plan your day effectively
                   </p>
                 </div>
               </div>
               <svg
-                class="w-6 h-6 text-glass-strong opacity-50"
+                class="w-5 h-5 md:w-6 md:h-6 text-glass-strong opacity-50 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -447,14 +432,14 @@
 
             <div
               data-view="goals-view"
-              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95"
+              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95 transition-transform duration-300"
             >
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-4 md:gap-5">
                 <div
-                  class="w-14 h-14 rounded-2xl bg-rose-500/20 text-rose-700 dark:text-rose-300 flex items-center justify-center border border-white/40 dark:border-white/10"
+                  class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-rose-500/20 text-rose-700 dark:text-rose-300 flex items-center justify-center border border-white/40 dark:border-white/10"
                 >
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -468,16 +453,16 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-lg text-glass-strong">
+                  <h3 class="font-bold text-base md:text-lg text-glass-strong">
                     Daily Goals
                   </h3>
-                  <p class="text-sm font-medium text-glass-strong opacity-80">
+                  <p class="text-xs md:text-sm font-medium text-glass-strong opacity-80">
                     Track and achieve your goals
                   </p>
                 </div>
               </div>
               <svg
-                class="w-6 h-6 text-glass-strong opacity-50"
+                class="w-5 h-5 md:w-6 md:h-6 text-glass-strong opacity-50 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -493,14 +478,14 @@
 
             <div
               data-view="pomodoro-view"
-              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95"
+              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95 transition-transform duration-300"
             >
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-4 md:gap-5">
                 <div
-                  class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-700 dark:text-amber-300 flex items-center justify-center border border-white/40 dark:border-white/10"
+                  class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-amber-500/20 text-amber-700 dark:text-amber-300 flex items-center justify-center border border-white/40 dark:border-white/10"
                 >
                   <svg
-                    class="w-7 h-7"
+                    class="w-6 h-6 md:w-7 md:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -514,16 +499,16 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-bold text-lg text-glass-strong">
+                  <h3 class="font-bold text-base md:text-lg text-glass-strong">
                     Pomodoro Timer
                   </h3>
-                  <p class="text-sm font-medium text-glass-strong opacity-80">
+                  <p class="text-xs md:text-sm font-medium text-glass-strong opacity-80">
                     Focus and boost productivity
                   </p>
                 </div>
               </div>
               <svg
-                class="w-6 h-6 text-glass-strong opacity-50"
+                class="w-5 h-5 md:w-6 md:h-6 text-glass-strong opacity-50 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -539,25 +524,25 @@
 
             <div
               data-view="quote-view"
-              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95"
+              class="feature-card glass-panel glass-card-hover p-4 flex items-center justify-between bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer hover:scale-95 transition-transform duration-300"
             >
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-4 md:gap-5">
                 <div
-                  class="w-14 h-14 rounded-2xl bg-fuchsia-500/20 text-fuchsia-700 dark:text-fuchsia-300 flex items-center justify-center font-serif text-3xl font-bold pt-2 border border-white/40 dark:border-white/10"
+                  class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-fuchsia-500/20 text-fuchsia-700 dark:text-fuchsia-300 flex items-center justify-center font-serif text-2xl md:text-3xl font-bold pt-1 md:pt-2 border border-white/40 dark:border-white/10"
                 >
                   “
                 </div>
                 <div>
-                  <h3 class="font-bold text-lg text-glass-strong">
+                  <h3 class="font-bold text-base md:text-lg text-glass-strong">
                     Motivation Quote
                   </h3>
-                  <p class="text-sm font-medium text-glass-strong opacity-80">
+                  <p class="text-xs md:text-sm font-medium text-glass-strong opacity-80">
                     Stay inspired and motivated
                   </p>
                 </div>
               </div>
               <svg
-                class="w-6 h-6 text-glass-strong opacity-50"
+                class="w-5 h-5 md:w-6 md:h-6 text-glass-strong opacity-50 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -575,11 +560,11 @@
 
         <section
           id="todo-view"
-          class="feature-view glass-panel p-6 flex-1 flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+          class="feature-view glass-panel p-4 md:p-6 flex-1 flex flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem] min-h-0"
           style="display: none"
         >
-          <div class="relative flex items-center justify-center mb-6">
-            <button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0" data-back>
+          <div class="relative flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <button class="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 text-sm md:text-base transition-colors" data-back>
               <svg
                 class="w-4 h-4 shrink-0"
                 fill="none"
@@ -593,74 +578,77 @@
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
-              Back
+              <span class="hidden sm:inline">Back</span>
             </button>
-            <h2 class="text-2xl font-bold text-glass-strong text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-glass-strong text-center">
               Todo List
             </h2>
           </div>
 
           <div
-            class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 flex-1 max-h-[400px]"
+            class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 flex-1 min-h-0"
           >
             <div
-              class="glass-metric !items-stretch !text-left p-5 gap-4 flex flex-col"
+              class="glass-metric !items-stretch !text-left p-3 md:p-5 gap-3 md:gap-4 flex flex-col overflow-y-auto view-scroll"
             >
               <div class="field-box">
-                <label class="text-sm font-semibold text-glass-strong"
+                <label class="text-xs md:text-sm font-semibold text-glass-strong"
                   >Enter Task :
                 </label>
                 <input
                   id="todo-task-input"
                   type="text"
                   placeholder="Enter task title"
-                  class="rounded-md px-2 py-2 ml-5 dark:text-slate-700"
+                  class="glass-input mt-1 md:mt-2 text-sm md:text-base bg-white/40 dark:bg-black/40 border-none"
                 />
               </div>
-              <div class="field-box flex-1 flex items-start">
-                <label class="text-sm font-semibold text-glass-strong"
+              <div class="field-box flex-1 flex flex-col items-start min-h-[120px]">
+                <label class="text-xs md:text-sm font-semibold text-glass-strong"
                   >Enter Details :
                 </label>
                 <textarea
                   id="todo-details-input"
-                  rows="5"
+                  rows="4"
                   placeholder="Add task details"
-                  class="flex-1 resize-none px-2 py-2 ml-2 rounded-md dark:text-slate-700"
+                  class="glass-input mt-1 md:mt-2 flex-1 w-full resize-none text-sm md:text-base bg-white/40 dark:bg-black/40 border-none"
                 ></textarea>
               </div>
               <div class="field-box">
                 <label
-                  class="flex items-center gap-2 text-sm font-medium text-glass-strong cursor-pointer select-none"
+                  class="flex items-center gap-2 text-xs md:text-sm font-medium text-glass-strong cursor-pointer select-none"
                 >
                   <input
                     id="todo-important-input"
                     type="checkbox"
-                    class="w-4 h-4 rounded accent-indigo-500 rounded-sm"
+                    class="w-4 h-4 rounded accent-indigo-500"
                   />
                   Mark as Important!
                 </label>
               </div>
               <button
                 id="todo-add-btn"
-                class="w-full py-2.5 rounded-2xl font-semibold bg-indigo-500/80 hover:bg-indigo-500 text-white transition-all shadow-sm"
+                class="w-full py-2.5 md:py-3 mt-1 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-indigo-500/80 hover:bg-indigo-500 text-white transition-all shadow-sm shrink-0"
               >
                 Add Task
               </button>
             </div>
 
             <div
-              class="hidden md:block h-[85%] w-[2px] bg-black/20 dark:bg-white/40 self-center rounded-full"
+              class="hidden md:block h-[90%] w-[2px] bg-black/10 dark:bg-white/20 self-center rounded-full shrink-0"
+            ></div>
+            <div
+              class="block md:hidden w-[90%] h-[2px] bg-black/10 dark:bg-white/20 self-center rounded-full shrink-0 my-2"
             ></div>
 
             <div
-              class="glass-metric !items-stretch !text-left p-5 gap-3 flex flex-col overflow-y-auto view-scroll"
+              class="glass-metric !items-stretch !text-left p-3 md:p-5 gap-3 flex flex-col overflow-y-auto view-scroll"
             >
               <div id="todo-list" class="flex flex-col gap-3"></div>
               <p
                 id="todo-empty-msg"
-                class="text-sm text-slate-600 dark:text-slate-300 text-center mt-10"
+                class="text-xs md:text-sm text-slate-600 dark:text-slate-400 text-center mt-6 md:mt-10"
               >
-                No tasks yet — add one from left to get started!
+                No tasks yet — add one to get started!
               </p>
             </div>
           </div>
@@ -668,29 +656,29 @@
 
         <section
           id="planner-view"
-          class="feature-view glass-panel p-6 flex-1 flex flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+          class="feature-view glass-panel p-4 md:p-6 flex-1 flex flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem] min-h-0"
           style="display: none"
         >
-          <div class="relative flex items-center justify-center mb-6 shrink-0">
-            <button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 transition-colors" data-back>
+          <div class="relative flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <button class="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 text-sm md:text-base transition-colors" data-back>
               <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
               </svg>
-              Back
+              <span class="hidden sm:inline">Back</span>
             </button>
-            <h2 class="text-2xl font-bold text-glass-strong text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-glass-strong text-center">
               Daily Planner
             </h2>
           </div>
 
           <div
             id="planner-grid"
-            class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 max-h-[350px] overflow-y-auto view-scroll px-3 py-2"
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 md:gap-y-4 flex-1 min-h-0 overflow-y-auto view-scroll px-1 md:px-3 py-2"
           >
             </div>
 
-          <div class="mt-4 pt-4 border-t border-white/20 dark:border-white/10 flex justify-end shrink-0">
-            <button id="planner-edit-btn" class="px-8 py-2.5 rounded-[1.5rem] font-semibold bg-indigo-500/80 hover:bg-indigo-500 text-white transition-all shadow-md">
+          <div class="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-white/20 dark:border-white/10 flex justify-end shrink-0">
+            <button id="planner-edit-btn" class="w-full sm:w-auto px-6 md:px-8 py-2.5 rounded-xl md:rounded-[1.5rem] text-sm md:text-base font-semibold bg-indigo-500/80 hover:bg-indigo-500 text-white transition-all shadow-md">
               Edit Plan
             </button>
           </div>
@@ -698,11 +686,11 @@
 
         <section
           id="goals-view"
-          class="feature-view glass-panel p-6 flex-1 flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+          class="feature-view glass-panel p-4 md:p-6 flex-1 flex flex-col bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem] min-h-0"
           style="display: none"
         >
-          <div class="relative flex items-center justify-center mb-6">
-            <button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0" data-back>
+          <div class="relative flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <button class="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 text-sm md:text-base transition-colors" data-back>
               <svg
                 class="w-4 h-4 shrink-0"
                 fill="none"
@@ -716,63 +704,66 @@
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
-              Back
+              <span class="hidden sm:inline">Back</span>
             </button>
-            <h2 class="text-2xl font-bold text-glass-strong text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-glass-strong text-center">
               Daily Goals
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 flex-1 max-h-[400px]">
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 flex-1 min-h-0">
             <div
-              class="glass-metric !items-stretch !text-left p-5 gap-4 flex flex-col"
+              class="glass-metric !items-stretch !text-left p-3 md:p-5 gap-3 md:gap-4 flex flex-col overflow-y-auto view-scroll"
             >
               <div class="field-box">
-                <label class="text-sm font-semibold text-glass-strong"
+                <label class="text-xs md:text-sm font-semibold text-glass-strong"
                   >Enter Goal Title : </label
                 >
                 <input
                   id="goal-title-input"
                   type="text"
                   placeholder="Enter your goal"
-                  class="glass-input rounded-md px-2 py-2 ml-5 dark:text-slate-700"
+                  class="glass-input mt-1 md:mt-2 text-sm md:text-base bg-white/40 dark:bg-black/40 border-none"
                 />
               </div>
-              <div class="field-box flex-1 flex items-start">
-                <label class="text-sm font-semibold text-glass-strong"
+              <div class="field-box flex-1 flex flex-col items-start min-h-[120px]">
+                <label class="text-xs md:text-sm font-semibold text-glass-strong"
                   >Enter Your Goal Details : </label
                 >
                 <textarea
                   id="goal-details-input"
                   placeholder="Purpose of the goal"
-                  rows="5"
-                  class="glass-input flex-1 resize-none ml-5 rounded-md px-2 py-2 dark:text-slate-700"
+                  rows="4"
+                  class="glass-input flex-1 mt-1 md:mt-2 w-full resize-none text-sm md:text-base bg-white/40 dark:bg-black/40 border-none"
                 ></textarea>
               </div>
               <button
                 id="goal-add-btn"
-                class="w-full py-2.5 rounded-2xl font-semibold bg-rose-500/80 hover:bg-rose-500 text-white transition-all shadow-sm"
+                class="w-full py-2.5 md:py-3 mt-1 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-rose-500/80 hover:bg-rose-500 text-white transition-all shadow-sm shrink-0"
               >
                 Add Goal
               </button>
             </div>
 
             <div
-              class="hidden md:block h-[85%] w-[2px] bg-black/20 dark:bg-white/40 self-center rounded-full"
+              class="hidden md:block h-[90%] w-[2px] bg-black/10 dark:bg-white/20 self-center rounded-full shrink-0"
+            ></div>
+            <div
+              class="block md:hidden w-[90%] h-[2px] bg-black/10 dark:bg-white/20 self-center rounded-full shrink-0 my-2"
             ></div>
 
             <div
-              class="glass-metric !items-stretch !text-left p-5 gap-3 flex flex-col overflow-y-auto view-scroll"
+              class="glass-metric !items-stretch !text-left p-3 md:p-5 gap-3 flex flex-col overflow-y-auto view-scroll"
             >
               <h3
-                class="text-sm font-bold text-glass-strong uppercase tracking-wide opacity-70"
+                class="text-xs md:text-sm font-bold text-glass-strong uppercase tracking-wide opacity-70 shrink-0"
               >
                 All Goals
               </h3>
               <div id="goals-list" class="flex flex-col gap-3"></div>
               <p
                 id="goals-empty-msg"
-                class="text-sm text-slate-600 dark:text-slate-300 text-center mt-10"
+                class="text-xs md:text-sm text-slate-600 dark:text-slate-400 text-center mt-6 md:mt-10"
               >
                 No goals yet — set one to stay on track!
               </p>
@@ -782,11 +773,11 @@
 
         <section
           id="pomodoro-view"
-          class="feature-view glass-panel p-6 flex-1 flex-col items-center justify-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+          class="feature-view glass-panel p-4 md:p-6 flex-1 flex flex-col items-center justify-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem] min-h-0 overflow-y-auto view-scroll"
           style="display: none"
         >
-          <div class="relative flex items-center justify-center mb-10 w-full">
-            <button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0" data-back>
+          <div class="relative flex items-center justify-center mb-6 md:mb-10 w-full shrink-0">
+            <button class="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 text-sm md:text-base transition-colors" data-back>
               <svg
                 class="w-4 h-4 shrink-0"
                 fill="none"
@@ -800,35 +791,35 @@
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
-              Back
+              <span class="hidden sm:inline">Back</span>
             </button>
-            <h2 class="text-2xl font-bold text-glass-strong text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-glass-strong text-center">
               Study With Me!
             </h2>
           </div>
 
-          <div class="flex flex-col items-center gap-6">
+          <div class="flex flex-col items-center gap-6 md:gap-8 w-full max-w-md my-auto">
             <div
-              class="flex gap-2 bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/10 rounded-full p-1"
+              class="flex flex-wrap justify-center gap-1.5 md:gap-2 bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/10 rounded-[1.5rem] p-1.5"
             >
               <button
                 data-mode="work"
                 data-minutes="25"
-                class="pomodoro-mode-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-white/60 dark:bg-white/20 text-glass-strong transition-all"
+                class="pomodoro-mode-btn px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-white/60 dark:bg-white/20 text-glass-strong transition-all"
               >
                 Work Session
               </button>
               <button
                 data-mode="short"
                 data-minutes="5"
-                class="pomodoro-mode-btn px-4 py-1.5 rounded-full text-sm font-semibold text-glass-strong opacity-70 transition-all"
+                class="pomodoro-mode-btn px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-glass-strong opacity-70 transition-all"
               >
                 Short Break
               </button>
               <button
                 data-mode="long"
                 data-minutes="15"
-                class="pomodoro-mode-btn px-4 py-1.5 rounded-full text-sm font-semibold text-glass-strong opacity-70 transition-all"
+                class="pomodoro-mode-btn px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-glass-strong opacity-70 transition-all"
               >
                 Long Break
               </button>
@@ -836,13 +827,13 @@
 
             <div
               id="pomodoro-display"
-              class="text-8xl font-light text-glass-strong tabular-nums"
+              class="text-6xl sm:text-7xl md:text-8xl font-light text-glass-strong tabular-nums tracking-tight md:tracking-normal"
             >
               25:00
             </div>
 
-            <div class="field-box w-72">
-              <label class="text-sm font-semibold text-glass-strong text-center"
+            <div class="field-box w-full max-w-[280px]">
+              <label class="text-xs md:text-sm font-semibold text-glass-strong text-center"
                 >Set Minutes: <span id="pomodoro-slider-value">25</span></label
               >
               <input
@@ -851,26 +842,26 @@
                 min="1"
                 max="60"
                 value="25"
-                class="w-full"
+                class="w-full mt-2"
               />
             </div>
 
-            <div class="flex gap-4">
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
               <button
                 id="pomodoro-start"
-                class="px-6 py-2.5 rounded-2xl font-semibold bg-emerald-500/80 hover:bg-emerald-500 text-white transition-all shadow-sm"
+                class="flex-1 min-w-[80px] md:min-w-[100px] px-4 md:px-6 py-2.5 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-emerald-500/80 hover:bg-emerald-500 text-white transition-all shadow-sm"
               >
                 Start
               </button>
               <button
                 id="pomodoro-pause"
-                class="px-6 py-2.5 rounded-2xl font-semibold bg-amber-500/80 hover:bg-amber-500 text-white transition-all shadow-sm"
+                class="flex-1 min-w-[80px] md:min-w-[100px] px-4 md:px-6 py-2.5 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-amber-500/80 hover:bg-amber-500 text-white transition-all shadow-sm"
               >
                 Pause
               </button>
               <button
                 id="pomodoro-reset"
-                class="px-6 py-2.5 rounded-2xl font-semibold bg-slate-500/70 hover:bg-slate-500 text-white transition-all shadow-sm"
+                class="flex-1 min-w-[80px] md:min-w-[100px] px-4 md:px-6 py-2.5 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-slate-500/70 hover:bg-slate-500 text-white transition-all shadow-sm"
               >
                 Reset
               </button>
@@ -880,11 +871,11 @@
 
         <section
           id="quote-view"
-          class="feature-view glass-panel p-6 flex-1 flex-col items-center justify-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[2rem]"
+          class="feature-view glass-panel p-4 md:p-6 flex-1 flex flex-col items-center justify-center bg-white/20 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-[1.5rem] md:rounded-[2rem] min-h-0 overflow-y-auto view-scroll"
           style="display: none"
         >
-          <div class="relative flex items-center justify-center mb-10 w-full">
-            <button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0" data-back>
+          <div class="relative flex items-center justify-center mb-6 md:mb-10 w-full shrink-0">
+            <button class="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-indigo-500/30 hover:bg-indigo-500 text-white absolute left-0 text-sm md:text-base transition-colors" data-back>
               <svg
                 class="w-4 h-4 shrink-0"
                 fill="none"
@@ -898,42 +889,44 @@
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
-              Back
+              <span class="hidden sm:inline">Back</span>
             </button>
-            <h2 class="text-2xl font-bold text-glass-strong text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-glass-strong text-center">
               Quote of the Day
             </h2>
           </div>
 
-          <div
-          class="w-full max-w-3xl bg-slate-800/90 dark:bg-black/50 border border-white/10 rounded-2xl p-8 relative shadow-lg"
-          >
-            <span
-              class="absolute top-6 right-6 text-5xl font-serif text-fuchsia-400/80"
-              >"</span
+          <div class="w-full flex flex-col items-center justify-center my-auto">
+            <div
+            class="w-full max-w-3xl bg-slate-800/90 dark:bg-black/50 border border-white/10 rounded-2xl p-6 md:p-10 relative shadow-lg"
             >
-            <span
-              class="absolute top-6 left-4 text-5xl font-serif text-fuchsia-400/80"
-              >"</span
-            >
-            <p
-              id="quote-text"
-              class="text-xl md:text-xl font-bold text-center text-white leading-snug pr-6"
-            >
-              Loading...
-            </p>
-            <p
-              id="quote-author"
-              class="mt-4 text-sm font-medium text-slate-300"
-            ></p>
-          </div>
+              <span
+                class="absolute top-4 right-4 md:top-6 md:right-6 text-4xl md:text-5xl font-serif text-fuchsia-400/80"
+                >"</span
+              >
+              <span
+                class="absolute top-4 left-3 md:top-6 md:left-4 text-4xl md:text-5xl font-serif text-fuchsia-400/80"
+                >"</span
+              >
+              <p
+                id="quote-text"
+                class="text-lg sm:text-xl md:text-2xl font-bold text-center text-white leading-snug px-3 md:px-6"
+              >
+                Loading...
+              </p>
+              <p
+                id="quote-author"
+                class="mt-4 md:mt-6 text-xs md:text-sm font-medium text-slate-300 text-center"
+              ></p>
+            </div>
 
-          <button
-            id="quote-new-btn"
-            class="mt-8 px-6 py-2.5 rounded-2xl font-semibold bg-fuchsia-500/80 hover:bg-fuchsia-500 text-white transition-all shadow-sm"
-          >
-            New Quote
-          </button>
+            <button
+              id="quote-new-btn"
+              class="mt-6 md:mt-8 px-6 md:px-8 py-2.5 md:py-3 rounded-xl md:rounded-2xl text-sm md:text-base font-semibold bg-fuchsia-500/80 hover:bg-fuchsia-500 text-white transition-all shadow-sm"
+            >
+              New Quote
+            </button>
+          </div>
         </section>
       </div>
     </div>
